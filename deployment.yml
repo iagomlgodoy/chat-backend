@@ -24,5 +24,6 @@ spec:
             value: https://gateway-wdc.watsonplatform.net/assistant/api
           - name: ASSISTANT_ID
             value: 92994250-973c-462b-b084-32f1829cb4e7
+        imagePullPolicy: Never
 
           
