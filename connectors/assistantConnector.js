@@ -53,6 +53,11 @@ async function sendMessageToAssistant(payload) {
         }
         return response
     } catch (err) {
+        console.log(err)
+        if(err.message = 'Invalid Session'){
+            payload.session_id = null;
+            sendMessageToAssistant(payload);
+        }
         throw (err)
     }
 }
