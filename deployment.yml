@@ -14,7 +14,7 @@ spec:
    spec:     # pod spec                  
      containers:
      - name: NAME_IMAGE
-       image: de.icr.io/NAMESPACE/NAME_IMAGE:latest
+       image: us.icr.io/NAMESPACE/NAME_IMAGE:latest
        ports:
          - containerPort: 8080
        env:
