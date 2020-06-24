@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: NAME_APPLICATION
+ name: node-web-app
 spec:
  replicas: 2
  selector:
      matchLabels:
-       app: NAME_APPLICATION
+       app: node-web-app
  template:
    metadata:
      labels:
-       app: NAME_APPLICATION
+       app: node-web-app
    spec:     # pod spec                  
      containers:
-     - name: NAME_IMAGE
-       image: us.icr.io/NAMESPACE/NAME_IMAGE:latest
+     - name: node-web-app
+       image: us.icr.io/cldstd40-ns/node-web-app:latest
        ports:
          - containerPort: 8080
        env:
          - name: APIKEY
-           value: VALUE_APIKEY_ASSISTANT
+           value: w9kKE7rI4Jj_sStPwsAwbKGEp_ResyAWZknES0Je7yfs
          - name: URL
-           value: VALUE_URL_ASSISTANT
+           value: https://gateway-wdc.watsonplatform.net/assistant/api
          - name: ASSISTANT_ID
-           value: VALUE_SKILL_ID_ASSISTANT
+           value: 92994250-973c-462b-b084-32f1829cb4e7
        imagePullPolicy: Always
